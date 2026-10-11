@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Leyla — AI Mental Wellness Companion
 
-## Getting Started
+> **"You're not alone. Let's get through this, together."**
 
-First, run the development server:
+Leyla is an AI mental wellness companion designed to be private, judgment-free, and always here for you. Built with Next.js App Router, TypeScript, Tailwind CSS, Framer Motion, next-intl, Supabase, and the Vercel AI SDK.
 
+---
+
+## 🌟 Key Features
+
+- **Twilight Aesthetic**: Dark-first purple/pink twilight theme with soft glassmorphism cards and smooth micro-animations.
+- **Multilingual Support**: Fully internationalized with `next-intl` supporting English (`en`), Hindi (`hi`), Telugu (`te`), and Tamil (`ta`).
+- **Reactive Leyla Avatar**: 9 emotional expression states (`idle`, `listening`, `thinking`, `happy`, `concerned`, `calm`, `celebrate`, `sleepy`, `hug`) with smooth crossfades and prefers-reduced-motion support.
+- **Safety First**: Deterministic crisis classifier, OpenAI moderation, and locale-specific helplines. No raw chat text in logs.
+- **Holistic Wellness Hub**: Daily mood tracker with Recharts, private encrypted journal, goal tracking with streak milestones, and Calm Space breathing exercises (4-7-8, box breathing).
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 16 (App Router, Turbopack, React 19)
+- **Styling**: Tailwind CSS v4, custom glassmorphism design tokens
+- **Animations**: Framer Motion
+- **Internationalization**: next-intl (`en`, `hi`, `te`, `ta`)
+- **Database & Auth**: Supabase (Postgres, Row Level Security, Auth)
+- **AI Engine**: Vercel AI SDK + OpenAI API
+- **Charts**: Recharts
+- **Validation**: Zod
+- **Rate Limiting**: Upstash Redis
+
+---
+
+## 🚀 Getting Started
+
+### 1. Prerequisites
+- Node.js 20+
+- npm or pnpm
+
+### 2. Environment Variables
+Copy `.env.example` to `.env.local`:
 ```bash
+cp .env.example .env.local
+```
+Fill in your Supabase, OpenAI, and Upstash Redis credentials.
+
+### 3. Install & Run
+```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+leyla/
+├── app/
+│   ├── (marketing)/       # Landing page & public routes
+│   ├── (app)/dashboard/   # Authenticated app shell & features
+│   ├── api/               # API routes (chat, icebreakers, etc.)
+│   ├── globals.css        # Twilight design tokens & animations
+│   └── layout.tsx         # Root layout with i18n & SEO
+├── components/
+│   ├── leyla/             # LeylaAvatar state machine & animations
+│   └── ui/                # Reusable UI primitives
+├── lib/
+│   ├── ai/                # AI system prompt & Vercel AI SDK integration
+│   ├── safety/            # Crisis classifier & moderation
+│   └── supabase/          # Supabase client & SSR helpers
+├── messages/              # i18n dictionaries (en, hi, te, ta)
+└── public/
+    └── leyla/             # Expression assets & illustrations
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📜 License
+MIT

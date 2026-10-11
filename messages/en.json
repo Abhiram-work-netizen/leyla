@@ -1,0 +1,79 @@
+{
+  "nav": {
+    "home": "Home",
+    "features": "Features",
+    "howItWorks": "How it works",
+    "community": "Community",
+    "about": "About",
+    "login": "Login",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Your Safe Space, Always",
+    "titleLine1": "You're not alone.",
+    "titleLine2": "Let's get through",
+    "titleLine3": "this, together.",
+    "subtitle": "Leyla is your AI mental wellness companion — private, judgment-free and always here for you. Talk, express, get support and feel better, at your own pace.",
+    "cta": "Start for Free",
+    "watchVideo": "Watch Video"
+  },
+  "trust": {
+    "free": "100% Free",
+    "multiLang": "Multi-language",
+    "private": "Private & Secure",
+    "available": "Always Available"
+  },
+  "features": {
+    "title": "Features",
+    "naturalConversations": "Natural Conversations",
+    "naturalConversationsDesc": "Talk like you would with a real friend — in any language.",
+    "proactiveCheckIns": "Proactive Check-ins",
+    "proactiveCheckInsDesc": "Optional messages to know how you're doing.",
+    "moodTracking": "Mood Tracking",
+    "moodTrackingDesc": "Understand your emotions over time.",
+    "personalizedSupport": "Personalized Support",
+    "personalizedSupportDesc": "Advice, exercises and tools that fit you.",
+    "crisisResources": "Crisis Resources",
+    "crisisResourcesDesc": "Get help when you need it most.",
+    "hundredPercentFree": "100% Free",
+    "hundredPercentFreeDesc": "Because mental health support should be for everyone."
+  },
+  "howItWorks": {
+    "title": "How Leyla Works?",
+    "subtitle": "Simple. Personal. Always with you.",
+    "step1Title": "Sign Up",
+    "step1Desc": "It's free and takes less than a minute.",
+    "step2Title": "Talk Freely",
+    "step2Desc": "Share whatever is on your mind.",
+    "step3Title": "Get Support",
+    "step3Desc": "Receive personalized guidance and tools.",
+    "step4Title": "Feel Better",
+    "step4Desc": "Track progress and build a healthier you."
+  },
+  "friend": {
+    "title": "A friend who checks on you —",
+    "titleHighlight": "even when you don't ask.",
+    "description": "With your permission, Leyla can send gentle check-ins to see how you're doing. Because sometimes, a small \"Hey, how are you?\" can make a big difference.",
+    "multiLangTitle": "Available in multiple languages",
+    "multiLangSubtitle": "Including English, Hindi, Telugu, Tamil and more..."
+  },
+  "cta": {
+    "title": "Healing is a journey.",
+    "subtitle": "You don't have to do it alone.",
+    "button": "Get Started for Free",
+    "noJudgement": "No Judgement",
+    "privacyMatters": "Your Privacy Matters",
+    "realSupport": "Real Support",
+    "brighterTomorrow": "A Brighter Tomorrow"
+  },
+  "footer": {
+    "tagline": "Your AI mental wellness companion",
+    "copyright": "© {year} Leyla. All rights reserved."
+  },
+  "chatBubbles": {
+    "talkAbout": "Talk about anything...",
+    "inYourLanguage": "in your language",
+    "imHereForYou": "I'm here for you ❤️",
+    "kinder": "a kinder tomorrow, is possible."
+  }
+}

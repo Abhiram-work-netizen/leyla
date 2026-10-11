@@ -1,0 +1,17 @@
+{
+  "name": "Leyla — AI Mental Wellness Companion",
+  "short_name": "Leyla",
+  "description": "Your AI mental wellness companion — private, judgment-free and always here for you.",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0b0914",
+  "theme_color": "#a855f7",
+  "icons": [
+    {
+      "src": "/leyla/leyla-idle.webp",
+      "sizes": "341x341",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}

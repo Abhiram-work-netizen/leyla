@@ -1,26 +1,224 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --radius: 1rem;
+
+  /* Twilight Dark Theme (Default) */
+  --background: #0b0914;
+  --foreground: #f5f3f9;
+  --card: #131024;
+  --card-foreground: #f5f3f9;
+  --popover: #131024;
+  --popover-foreground: #f5f3f9;
+  --primary: #a855f7;
+  --primary-foreground: #ffffff;
+  --secondary: #ec4899;
+  --secondary-foreground: #ffffff;
+  --muted: #1e1834;
+  --muted-foreground: #9a92b2;
+  --accent: #291f48;
+  --accent-foreground: #f5f3f9;
+  --destructive: #f43f5e;
+  --destructive-foreground: #ffffff;
+  --border: #251f3e;
+  --input: #251f3e;
+  --ring: #a855f7;
+
+  /* Chart Colors */
+  --chart-1: #a855f7;
+  --chart-2: #ec4899;
+  --chart-3: #6366f1;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+
+  /* Sidebar */
+  --sidebar: #0e0c1a;
+  --sidebar-foreground: #f5f3f9;
+  --sidebar-primary: #a855f7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1e1834;
+  --sidebar-accent-foreground: #f5f3f9;
+  --sidebar-border: #201a35;
+  --sidebar-ring: #a855f7;
+
+  /* Leyla Brand Tokens */
+  --leyla-purple: #a855f7;
+  --leyla-pink: #ec4899;
+  --leyla-deep: #1e1338;
+  --leyla-glow: rgba(168, 85, 247, 0.25);
+  --leyla-glass-bg: rgba(26, 21, 46, 0.65);
+  --leyla-glass-border: rgba(168, 85, 247, 0.18);
+  --leyla-glass-hover: rgba(36, 29, 65, 0.85);
+
+  /* Mood Palette */
+  --mood-terrible: #ef4444;
+  --mood-sad: #f97316;
+  --mood-okay: #eab308;
+  --mood-good: #22c55e;
+  --mood-great: #a855f7;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.light {
+  --background: #fbf9fd;
+  --foreground: #1a162b;
+  --card: #ffffff;
+  --card-foreground: #1a162b;
+  --popover: #ffffff;
+  --popover-foreground: #1a162b;
+  --primary: #9333ea;
+  --primary-foreground: #ffffff;
+  --secondary: #db2777;
+  --secondary-foreground: #ffffff;
+  --muted: #f1ecf7;
+  --muted-foreground: #6c6382;
+  --accent: #eee5f8;
+  --accent-foreground: #4a1d96;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #e4dcee;
+  --input: #e4dcee;
+  --ring: #9333ea;
+
+  --sidebar: #f7f3fb;
+  --sidebar-foreground: #1a162b;
+  --sidebar-primary: #9333ea;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ede4f7;
+  --sidebar-accent-foreground: #1a162b;
+  --sidebar-border: #e4dcee;
+  --sidebar-ring: #9333ea;
+
+  --leyla-glass-bg: rgba(255, 255, 255, 0.75);
+  --leyla-glass-border: rgba(147, 51, 234, 0.15);
+  --leyla-glass-hover: rgba(255, 255, 255, 0.95);
+  --leyla-glow: rgba(147, 51, 234, 0.15);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  border-color: var(--border);
+}
+
+html {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--leyla-glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--leyla-glass-border);
+}
+
+.glass-panel-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-hover:hover {
+  background: var(--leyla-glass-hover);
+  border-color: rgba(168, 85, 247, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -10px var(--leyla-glow);
+}
+
+/* Gradient Text */
+.gradient-text-leyla {
+  background: linear-gradient(135deg, #c084fc 0%, #f472b6 60%, #e879f9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg-leyla {
+  background: linear-gradient(135deg, #9333ea 0%, #db2777 100%);
+}
+
+.gradient-bg-card {
+  background: linear-gradient(145deg, rgba(30, 22, 54, 0.9) 0%, rgba(19, 16, 36, 0.95) 100%);
+}
+
+/* Glow effects */
+.glow-primary {
+  box-shadow: 0 0 35px var(--leyla-glow), 0 0 70px rgba(236, 72, 153, 0.1);
+}
+
+.glow-subtle {
+  box-shadow: 0 8px 25px -6px rgba(168, 85, 247, 0.25);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(1.5deg); }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 5s ease-in-out 2.5s infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2345;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3e3366;
 }
